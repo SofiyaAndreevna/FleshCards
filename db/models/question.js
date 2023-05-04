@@ -8,10 +8,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   Question.init(
     {
-      question: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-      },
       titleId: {
         type: DataTypes.INTEGER,
         references: {
@@ -19,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
           key: "id",
         },
         onDelete: "CASCADE",
+      },
+      question: {
+        type: DataTypes.TEXT,
+        allowNull: false,
       },
       answer: {
         type: DataTypes.TEXT,
