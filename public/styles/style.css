@@ -1,0 +1,67 @@
+.body {
+  background-color: rgba(33, 37, 41, 1);
+}
+
+.header {
+  border-width: 1px;
+  background-color: aqua;
+}
+
+.btn {
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.myCard {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 20%;
+  padding: 10px;
+  background-color: rgba(33, 37, 41, 0.9);
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  color: aqua;
+}
+
+.myCard:hover {
+  box-shadow: 0px 7px 5px aqua;
+}
+
+.jopa {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+  background-color: transparent;
+  border: solid transparent;
+  border-width: 1px 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+.visible {
+  visibility: visible;
+}
+
+.questionCards {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 20%;
+  padding: 10px;
+  background-color: rgba(33, 37, 41, 0.9);
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  color: aqua;
+}
+
+.questionCards:hover {
+  box-shadow: 0px 7px 5px aqua;
+}
