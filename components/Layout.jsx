@@ -1,5 +1,5 @@
-const React = require('react');
-const Navbar = require('./Navbar');
+const React = require("react");
+const Navbar = require("./Navbar");
 
 module.exports = function Layout({ title, children }) {
   return (
@@ -15,12 +15,12 @@ module.exports = function Layout({ title, children }) {
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></link>
         <script defer src="/scripts/carScript.js" />
       </head>
-      <Navbar/>
-      <body>{children}</body>
+      <Navbar />
+      <body className="body">{children}</body>
     </html>
   );
 };
