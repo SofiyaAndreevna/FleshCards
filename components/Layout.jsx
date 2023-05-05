@@ -7,6 +7,7 @@ module.exports = function Layout({ title, children }) {
       <head>
         <title>{title}</title>
         <link rel="stylesheet" href="/styles/style.css" />
+        <script defer src="/js/cardScript.js" />
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
@@ -17,7 +18,6 @@ module.exports = function Layout({ title, children }) {
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossOrigin="anonymous"
         ></link>
-        <script defer src="/js/cardScript.js" />
       </head>
       <Navbar />
       <body className="body">{children}</body>
