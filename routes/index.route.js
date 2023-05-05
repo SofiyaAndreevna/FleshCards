@@ -6,6 +6,8 @@ const qustionRouter = require('./question.route');
 
 router.use('/', registrationRoute);
 router.use('/titles', titlesRouter);
-router.use('/titles/titleId/question/0', qustionRouter);
+router.use('/questions', qustionRouter);
+// router.use('/titles/2', qustionRouter);
+// router.use('/titles/3', qustionRouter);
 
 module.exports = router;
