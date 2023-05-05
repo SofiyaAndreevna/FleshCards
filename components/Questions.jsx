@@ -1,6 +1,6 @@
-const React = require("react");
-const Layout = require("./Layout");
-const Card = require("./Card");
+const React = require('react');
+const Layout = require('./Layout');
+// const Card = require('./Cards');
 
 module.exports = function Questions({ title }) {
   return (
@@ -12,7 +12,9 @@ module.exports = function Questions({ title }) {
             <p class="card-text">
               Описание описание описание описание описание описание
             </p>
-            <button className="btn btn-outline-info">Играть</button>
+            <a href="/title/1/question/0">
+              <button className="btn btn-outline-info">Играть</button>
+            </a>
           </div>
         </div>
         <div class="text-bg-dark mb-3">
@@ -21,7 +23,9 @@ module.exports = function Questions({ title }) {
             <p class="card-text">
               Описание описание описание описание описание описание
             </p>
-            <button className="btn btn-outline-info">Играть</button>
+            <a href="/title/2/question/0">
+              <button className="btn btn-outline-info">Играть</button>
+            </a>
           </div>
         </div>
         <div class="text-bg-dark mb-3">
@@ -30,7 +34,9 @@ module.exports = function Questions({ title }) {
             <p class="card-text">
               Описание описание описание описание описание описание
             </p>
-            <button className="btn btn-outline-info">Играть</button>
+            <a href="/title/3/question/0">
+              <button className="btn btn-outline-info">Играть</button>
+            </a>
           </div>
         </div>
       </div>
