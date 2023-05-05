@@ -1,5 +1,5 @@
-const React = require("react");
-const Navbar = require("./Navbar");
+const React = require('react');
+const Navbar = require('./Navbar');
 
 module.exports = function Layout({ title, children }) {
   return (
@@ -17,7 +17,7 @@ module.exports = function Layout({ title, children }) {
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossOrigin="anonymous"
         ></link>
-        <script defer src="/scripts/carScript.js" />
+        <script defer src="/js/cardScript.js" />
       </head>
       <Navbar />
       <body className="body">{children}</body>

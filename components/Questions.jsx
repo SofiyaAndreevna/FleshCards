@@ -12,7 +12,7 @@ module.exports = function Questions({ title }) {
             <p class="card-text">
               Описание описание описание описание описание описание
             </p>
-            <a href="/title/1/question/0">
+            <a href="/questions/1/index/0">
               <button className="btn btn-outline-info">Играть</button>
             </a>
           </div>
@@ -23,7 +23,7 @@ module.exports = function Questions({ title }) {
             <p class="card-text">
               Описание описание описание описание описание описание
             </p>
-            <a href="/title/2/question/0">
+            <a href="/titles/questions/1/question/0">
               <button className="btn btn-outline-info">Играть</button>
             </a>
           </div>
@@ -34,7 +34,7 @@ module.exports = function Questions({ title }) {
             <p class="card-text">
               Описание описание описание описание описание описание
             </p>
-            <a href="/title/3/question/0">
+            <a href="/titles/questions/1/question/0">
               <button className="btn btn-outline-info">Играть</button>
             </a>
           </div>

@@ -2,12 +2,37 @@ const express = require('express');
 const router = express.Router();
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
-const Card = require('../components/Cards');
+const Card = require('../components/Card');
+const { Question } = require('../db/models');
+const Cards = require('../components/Cards');
 
-router.get('/title/:titleId/question/:questionId', (req, res) => {
-  if (req.params.questionId === 0) {
-    res.send('HIIIII');
+router.get('/:titleId/index/:questionId', async (req, res) => {
+  const questions = await Question.findAll({
+    where: { titleId: req.params.titleId },
+  });
+  if (req.params.questionId === '0') {
+    console.log(199999);
+    const elem = React.createElement(Cards, {
+      title: 'QCard',
+      card: questions[0],
+      parametr: Number(req.params.questionId) + 1,
+    });
+    const html = ReactDOMServer.renderToStaticMarkup(elem);
+    const data = `<!DOCTYPE html>${html}`;
+    res.send(data);
   }
+  // if (Number(req.params.questionId) > 0 && Number(req.params.questionId) < 6) {
+    console.log(2);
+    const elem = React.createElement(Card, {
+      card: questions[Number(req.params.questionId)],
+      parametr: Number(req.params.questionId) + 1,
+    });
+    const html = ReactDOMServer.renderToStaticMarkup(elem);
+    res.json({ doc: html });
+  // } else {
+    // здесь я переадресовываю на страницу регистрации
+    res.json({ message: 'redirect' });
+  // }
 });
 
 // router.get('/', (req, res) => {
