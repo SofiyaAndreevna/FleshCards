@@ -3,7 +3,7 @@ const myCard = document.querySelector('.myCard');
 const Card = document.querySelector('.totalCard');
 // submit на кнопку ответить и click на кнопку далее
 //class btnNext
-//class btnAnswer
+//class 
 // class myCard на саму форму
 // class totalCard на весь див со страницей карточек
 // data-id={card.id} присвоить карточке???
@@ -13,9 +13,9 @@ const Card = document.querySelector('.totalCard');
 // нужно проверить все put post особенно в routes
 
 if (myCard) {
-  myCard.addEventListener('click', async (e) => {
+  myCard.addEventListener('submit', async (e) => {
     e.preventDefault();
-    if (e.target.classList.contains('btnNext')) {
+    if (e.target.classList.contains('btnAnswer')) {
       const result = await fetch(`/questions/card/${e.target.dataset.id}`, {
         method: 'PUT',
         headers: {
@@ -29,15 +29,15 @@ if (myCard) {
 }
 
 if (Card) {
-  Card.addEventListener('submit', async (e) => {
+  Card.addEventListener('click', async (e) => {
     e.preventDefault();
-    if (e.target.classList.contains('btnAnswer')) {
+    if (e.target.classList.contains('btnNext')) {
       //кнопка ответить должна становиться невидимой??
       // нужно чтобы на сабмит правильный ответ из базы появлялся и может не далать кнопку невидимой???
       // e.target.classList.toggle('hidden');
 
       const result = await fetch(`/questions/card/${e.target.dataset.id}`, {
-        method: 'POST',
+        method: 'GET',
         headers: {
           'Content-Type': 'application/json',
         },
@@ -51,9 +51,9 @@ if (Card) {
       //ответом из базы, то прибавляем 10 очков(хорошо было бы получать в ответе очки
       //пользователя и отсылать их в базу данных и менять их там по имени пользователя)
 
-      if ((data.message === answer.value)) {
+      if (data.message === answer.value) {
         // points += 10;
-        const res = await fetch()
+        const res = await fetch();
       }
     }
   });
