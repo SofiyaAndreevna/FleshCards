@@ -20,18 +20,24 @@ router.get('/:titleId/index/:questionId', async (req, res) => {
     const html = ReactDOMServer.renderToStaticMarkup(elem);
     const data = `<!DOCTYPE html>${html}`;
     res.send(data);
-  }
-  // if (Number(req.params.questionId) > 0 && Number(req.params.questionId) < 6) {
-    console.log(2);
+  } else if (
+    Number(req.params.questionId) > 0 &&
+    Number(req.params.questionId) <= 5
+  ) {
     const elem = React.createElement(Card, {
       card: questions[Number(req.params.questionId)],
       parametr: Number(req.params.questionId) + 1,
     });
     const html = ReactDOMServer.renderToStaticMarkup(elem);
     res.json({ doc: html });
-  // } else {
+    // } else {
     // здесь я переадресовываю на страницу регистрации
-    res.json({ message: 'redirect' });
+    // res.json({ message: 'redirect' });
+  } else {
+    res.redirect('/');
+  }
+  // if (Number(req.params.questionId) > 0 && Number(req.params.questionId) < 6) {
+
   // }
 });
 
